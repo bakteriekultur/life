@@ -1,18 +1,18 @@
 #pragma once
 #include <windows.h>
+#include <iostream>
 #include <vector>
-class display{
+class Display{
   public:
-    display();
-    ~display();
+    Display();
+    ~Display();
+    void PrintScreen();
+    void Clear();
 
   private:
   HANDLE oldScreenBuffer;
-  HANDLE newScreenBuffer;
+  HANDLE screenBuffer;
   int width;
   int height;
   std::vector<CHAR_INFO> screen;
-
-
-
 };
